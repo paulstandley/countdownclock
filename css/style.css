@@ -2,6 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  --header-color: rgb(38, 0, 255);
+  --header-background: rgb(222, 221, 248);
+  --main-color: rgb(47, 86, 192);
+  --main-background: rgb(194, 195, 219);
+  --section-color: rgb(60, 60, 236);
+  --section-background: rgb(211, 208, 223);
+  --footer-color: rgb(58, 89, 226);
+  --footer-background: rgb(211, 211, 224);
 }
 
 body {
@@ -13,34 +21,37 @@ body > header {
   padding: 3rem 1rem;
   text-align: center;
   font-size: 2rem;
-  background: rgb(188, 188, 202);
+  background: var(--header-background,rgb(188, 188, 202));
 }
 
 body > header > h1 {
-  color: rgb(109, 66, 73);
+  color: var(--header-color, rgb(130, 95, 211));
 }
 
 body > main {
   padding: 2rem;
-  background: rgb(155, 155, 194);
-  color: rgb(114, 113, 113);
+  background: var(--main-background ,rgb(155, 155, 194));
+  color: var(--main-color ,rgb(114, 113, 113));
   text-align: center;
 }
 
 body > main > h2 {
   padding: 1rem;
-  color: aliceblue;
 } 
+
+body > main > h3 {
+  padding: 1rem;
+}
 
 body > main > section {
   padding: 1rem;
-  background-color: rgb(86, 86, 139);
-  color: aliceblue;
+  color: var(--section-color, rgb(25, 25, 136));
+  background-color: var(--section-background ,rgb(86, 86, 139));
 }
 
 body > footer {
   padding: 1rem;
   text-align: center;
-  background: rgb(238, 221, 221);
-  color: rgb(90, 74, 74);
+  background: var(--footer-background ,rgb(221, 221, 238));
+  color: var(--footer-color, rgb(42, 41, 53));
 }
