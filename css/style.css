@@ -27,6 +27,17 @@ body > main {
   text-align: center;
 }
 
+body > main > h2 {
+  padding: 1rem;
+  color: aliceblue;
+} 
+
+body > main > section {
+  padding: 1rem;
+  background-color: rgb(86, 86, 139);
+  color: aliceblue;
+}
+
 body > footer {
   padding: 1rem;
   text-align: center;
