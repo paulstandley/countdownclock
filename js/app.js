@@ -1,20 +1,27 @@
 "use strict";
 
-let title = "Hollyday in";
+let title = "Hollyday starts";
 let clockDate = new Date();
+let birthdayHollday = new Date('November 2, 2019 15:05:00');
+let date1 = birthdayHollday.toDateString();
+
+console.log(date1);
+console.dir(clockDate);
 // get dom elements h2 section
-const h2Title = document.getElementById("h2Id");
+const targetTitle = document.getElementById("targetTitle");
 const dateClock = document.getElementById("clockId");
+const targetDate = document.getElementById("targetDate");
 // add to dom
-h2Title.innerText = title;
+targetTitle.innerText = title;
 dateClock.innerText = clockDate;
+targetDate.innerText = date1;
 
 setInterval(function() {  
 let clockDate = new Date();
 let dateYear = new Date().getFullYear();
 //console.dir(clockDate);
 // add to dom
-h2Title.innerText = title;
+targetTitle.innerText = `${title}`;
 dateClock.innerText = clockDate;
 }, 1000);
-console.log(h2Title);
+console.log(targetTitle);
