@@ -2,12 +2,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  --body-background: rgb(212, 212, 228);
   --header-color: rgb(59, 28, 236);
   --header-background: rgb(226, 228, 240);
   --main-color: rgb(47, 86, 192);
   --main-background: rgb(222, 223, 233);
   --section-color: rgb(60, 60, 236);
   --section-background: rgb(208, 208, 223);
+  --form-color: rgb(113, 102, 218);
+  --form-background: rgb(225, 224, 235);
   --footer-color: rgb(58, 89, 226);
   --footer-background: rgb(218, 224, 236);
 }
@@ -15,6 +18,7 @@
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1rem;
+  background: var(--body-background, rgb(236, 236, 240));
 }
 
 body > header {
@@ -52,6 +56,8 @@ body > main > section {
 body > form {
   padding: 1rem;
   text-align: center;
+  color: var(--form-color, rgb(113, 102, 218));
+  background: var(--form-background, rgb(225, 224, 235));
 }
 
 body > form > p {
@@ -63,8 +69,18 @@ body > form > input {
   padding: 0.4rem;
 }
 
-body > form > input:nth-child(3) {
-  padding: 4rem;
+body > form > input.submit {
+  padding: 0.6rem;
+  margin: 1rem;
+  background: rgb(134, 134, 209);
+}
+
+body > form > input.submit:hover {
+  padding: 0.6rem;
+  margin: 1rem;
+  background: rgb(30, 30, 82);
+  color: aliceblue;
+  cursor: pointer;
 }
 
 body > footer {
@@ -72,4 +88,7 @@ body > footer {
   text-align: center;
   color: var(--footer-color, rgb(58, 89, 226));
   background: var(--footer-background, rgb(218, 224, 236));
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
