@@ -13,10 +13,12 @@ const diff = document.getElementById('diff');
 
 // get form values
 const submit = document.getElementById('submit');
-submit.addEventListener('click', (evt) => {
+
+function submitInfo(evt) {
   evt.preventDefault();
-  console.log(evt);
-}, false);
+  const title = document.getElementById("newTitle");
+  console.log(title)
+}
 
 // add to dom
 targetTitle.innerText = title;
