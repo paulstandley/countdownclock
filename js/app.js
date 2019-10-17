@@ -14,10 +14,12 @@ const diff = document.getElementById('diff');
 // get form values
 const submit = document.getElementById('submit');
 
-function submitInfo(evt) {
-  evt.preventDefault();
-  const title = document.getElementById("newTitle");
-  console.log(title)
+function submitInfo() {
+  const newTitle = document.getElementById("newTitle").value;
+  const newDate = document.getElementById("newDate").value;
+  console.log(newTitle, newDate);
+  let thing = new Date(newDate).getTime();
+  console.log(thing);
 }
 
 // add to dom
