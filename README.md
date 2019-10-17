@@ -4,4 +4,4 @@
 
 ## countdown clock
 
-good luck al
+good luck al get well soon
