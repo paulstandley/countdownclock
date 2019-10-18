@@ -17,14 +17,16 @@
       <p id="clockId"></p>
     </section>
     <h3 id="targetTitle"></h3>
-    <section id="diff"></section>
+    <section id="display"></section>
     <h3 id="targetDate"></h3>
   </main>
   <form>
     <p>New Title:</p>
     <input id="newTitle" type="text" name="newtitle">
-    <p>New Date:</p>
-    <input id="newDate" type="date" name="newdate"><br>
+    <p>New Date and time:</p>
+    <input id="newDate" type="date" name="newdate">
+    <input type="time" name="newTime" id="newTime">
+    <br>
     <input onclick="submitInfo();" id="submit" class="submit" type="button" value="Submit">
   </form>
   <footer>
