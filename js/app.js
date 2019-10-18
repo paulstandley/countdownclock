@@ -1,25 +1,26 @@
 "use strict";
 
-runtime();
-
-let inputValueArray = [];
+let submitInputValue = false; 
+let newDate;
 
 function submitInfo() {
   const newTitle = document.getElementById("newTitle").value;
-  const newDate = document.getElementById("newDate").value;
+  newDate = document.getElementById("newDate").value;
   const newTime = document.getElementById("newTime").value;
   let newDateTime = new Date(`${newDate}, ${newTime}`).getTime();
   targetTitle.innerText = newTitle;
+  submitInputValue = true;
   console.log(newDateTime);
 }
 
 // update current time
-function runtime() {
 
+runtime();
+
+function runtime() {
+  let dateStringTarget;
   let title = "Hollyday starts";
   let clockDate = new Date();
-  let dateStringTarget = new Date('November 2, 2019 15:05:00');
-  let dateString = dateStringTarget.toDateString();
 
   // get dom elements
   const targetTitle = document.getElementById("targetTitle");
@@ -32,7 +33,11 @@ function runtime() {
   setInterval(() => {
     upDate = new Date();
     time = new Date().getTime();
-    nexttime = new Date('November 2, 2019 15:05:00').getTime();
+    if(submitInputValue) {
+      nexttime = new Date(`${inputFunc()}`).getTime();
+    }else{
+      nexttime = new Date('November 2, 2019 15:05:00').getTime();
+    }
     milliseconds = calculate(time, nexttime);
     seconds = calculate(time, nexttime) / 1000;
     minutes = (calculate(time, nexttime) / 1000) / 60;
@@ -46,14 +51,25 @@ function runtime() {
       <p>days : ${Math.floor(days)}</p>
     `;
     dateClock.innerText = upDate;
+    targetDate.innerText =  inputFunc();
   }, 100);
     
   // add to dom
   targetTitle.innerText = title;
   dateClock.innerText = clockDate;
-  targetDate.innerText = dateString;
   targetTitle.innerText = title;
 
+
+  function inputFunc() {
+    if(submitInputValue) {
+      dateStringTarget = new Date(newDate);
+    }
+    else{
+      dateStringTarget = new Date('November 2, 2019 15:05:00');
+    }
+    let dateString = dateStringTarget.toDateString();
+    return dateString;
+  }
 }
 
 // calculate difference between two dates
