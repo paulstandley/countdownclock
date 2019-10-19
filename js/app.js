@@ -19,7 +19,7 @@ runtime();
 
 function runtime() {
   let dateStringTarget;
-  let title = "Hollyday starts";
+  let title = "New Year starts in ";
   let clockDate = new Date();
 
   // get dom elements
@@ -38,7 +38,7 @@ function runtime() {
     if(submitInputValue) {
       nexttime = new Date(`${inputFunc()}`).getTime();
     }else{
-      nexttime = new Date('November 2, 2019 15:05:00').getTime();
+      nexttime = new Date('December 31, 2030 23:59:59').getTime();
     }
 
     milliseconds = calculate(time, nexttime);
@@ -78,7 +78,7 @@ function runtime() {
       dateStringTarget = new Date(newDate);
     }
     else{
-      dateStringTarget = new Date('November 2, 2019 15:05:00');
+      dateStringTarget = new Date('December 31, 2030 23:59:59');
     }
     let dateString = dateStringTarget.toDateString();
     return dateString;

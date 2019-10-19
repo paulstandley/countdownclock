@@ -4,12 +4,12 @@
   box-sizing: border-box;
   --body-background: rgb(244, 244, 250);
   --header-color: rgb(22, 5, 117);
-  --header-background: rgb(246, 247, 253);
+  --header-background: rgb(240, 241, 248);
   --main-color: rgb(21, 44, 109);
   --main-background: rgb(240, 241, 250);
   --section-color: rgb(36, 36, 139);
   --section-background: rgb(231, 231, 235);
-  --form-color: rgb(113, 102, 218);
+  --form-color: rgb(68, 58, 153);
   --form-background: rgb(245, 245, 252);
   --footer-color: rgb(15, 40, 155);
   --footer-background: rgb(245, 247, 250);
@@ -24,7 +24,7 @@ body {
 body > header {
   padding: 1rem;
   text-align: center;
-  background: var(--header-background, rgb(246, 247, 253));
+  background: var(--header-background, rgb(240, 241, 248));
 }
 
 body > header > h1 {
@@ -59,7 +59,7 @@ body > main > section > p > strong {
 body > form {
   padding: 1rem;
   text-align: center;
-  color: var(--form-color, rgb(113, 102, 218));
+  color: var(--form-color, rgb(68, 58, 153));
   background: var(--form-background, rgb(245, 245, 252));
 }
 
@@ -75,13 +75,14 @@ body > form > input {
 body > form > input.submit {
   padding: 0.6rem;
   margin: 1rem;
-  background: rgb(134, 134, 209);
+  background: rgb(53, 53, 168);
+  color: rgb(191, 179, 245);
 }
 
 body > form > input.submit:hover {
   padding: 0.6rem;
   margin: 1rem;
-  background: rgb(21, 21, 44);
+  background: rgb(35, 35, 87);
   color: aliceblue;
   cursor: pointer;
 }
