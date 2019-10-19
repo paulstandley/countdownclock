@@ -27,10 +27,12 @@ function runtime() {
   const dateClock = document.getElementById("clockId");
   const targetDate = document.getElementById("targetDate");
   const display = document.getElementById('display');
+  const displayClock = document.getElementById('displayClock');
 
   let upDate, time, nexttime, milliseconds, seconds, minutes, hours, days;
 
   setInterval(() => {
+
     upDate = new Date();
     time = new Date().getTime();
     if(submitInputValue) {
@@ -38,11 +40,13 @@ function runtime() {
     }else{
       nexttime = new Date('November 2, 2019 15:05:00').getTime();
     }
+
     milliseconds = calculate(time, nexttime);
     seconds = calculate(time, nexttime) / 1000;
     minutes = (calculate(time, nexttime) / 1000) / 60;
     hours = ((calculate(time, nexttime) / 1000) / 60) / 60;
     days = (((calculate(time, nexttime) / 1000) / 60) / 60) / 24;
+
     display.innerHTML = `
       <p>milliseconds :${milliseconds}</p>
       <p>seconds : ${Math.floor(seconds)}
@@ -50,17 +54,26 @@ function runtime() {
       <p>hours : ${Math.floor(hours)}</p>
       <p>days : ${Math.floor(days)}</p>
     `;
+
+    displayClock.innerHTML = `
+      <p>
+      <strong>${Math.floor(days)}</strong> Days  
+      <strong>${Math.floor(hours % 24)}</strong> Hours  
+      <strong>${Math.floor(minutes % 60)}</strong> Minutes 
+      <strong>${Math.floor(seconds % 60)}</strong> Seconds </p>
+    `;
+
     dateClock.innerText = upDate;
     targetDate.innerText =  inputFunc();
+
   }, 100);
     
   // add to dom
   targetTitle.innerText = title;
   dateClock.innerText = clockDate;
-  targetTitle.innerText = title;
-
 
   function inputFunc() {
+    
     if(submitInputValue) {
       dateStringTarget = new Date(newDate);
     }
@@ -74,5 +87,9 @@ function runtime() {
 
 // calculate difference between two dates
 function calculate(time, nexttime) {
-  return nexttime - time;
+  if(time - nexttime < 0) {
+    return nexttime - time;
+  }else{
+    return 0;
+  }
 }
