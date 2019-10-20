@@ -132,6 +132,10 @@ body > footer {
     color: var(--section-color, rgb(36, 36, 139));
     background-color: var(--section-background , rgb(231, 231, 235));
   }
+
+  body > main > section > p {
+    font-size: 1.1rem;
+  }
   
   body > main > section > p > strong {
     color: rgb(75, 5, 141);
