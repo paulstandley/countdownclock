@@ -29,7 +29,7 @@ function runtime() {
   const display = document.getElementById('display');
   const displayClock = document.getElementById('displayClock');
 
-  let upDate, time, nexttime, milliseconds, seconds, minutes, hours, days;
+  let upDate, time, nexttime, milliseconds, seconds, minutes, hours, days, weeks;
 
   setInterval(() => {
 
@@ -46,6 +46,7 @@ function runtime() {
     minutes = (calculate(time, nexttime) / 1000) / 60;
     hours = ((calculate(time, nexttime) / 1000) / 60) / 60;
     days = (((calculate(time, nexttime) / 1000) / 60) / 60) / 24;
+    weeks = ((((calculate(time, nexttime) / 1000) / 60) / 60) / 24) / 7;
 
     display.innerHTML = `
       <p>milliseconds :${milliseconds}</p>
@@ -53,11 +54,13 @@ function runtime() {
       <p>minutes : ${Math.floor(minutes)}</p>
       <p>hours : ${Math.floor(hours)}</p>
       <p>days : ${Math.floor(days)}</p>
+      <p>weeks : ${Math.floor(weeks)}</p>
     `;
 
     displayClock.innerHTML = `
       <p>
-      <strong>${Math.floor(days)}</strong> Days  
+      <strong>${Math.floor(weeks)}</strong> Weeks
+      <strong>${Math.floor(days % 7)}</strong> Days  
       <strong>${Math.floor(hours % 24)}</strong> Hours  
       <strong>${Math.floor(minutes % 60)}</strong> Minutes 
       <strong>${Math.floor(seconds % 60)}</strong> Seconds </p>
