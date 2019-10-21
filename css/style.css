@@ -39,48 +39,57 @@ body > main {
 }
 
 body > main > h2 {
-  padding: 0.4rem;
+  padding: 0.2rem 0 0.6rem 0;
 } 
 
 body > main > h3 {
-  padding: 0.6rem;
+  padding: 0.6rem 0.2rem;
 }
 
 body > main > section {
-  padding: 0.4rem 0.2rem;
-  font-size: 0.8rem;
+  padding: 0.4rem 6rem;
+  font-size: 0.9rem;
   color: var(--section-color, rgb(36, 36, 139));
   background-color: var(--section-background , rgb(231, 231, 235));
 }
 
+body > main > section > p {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+body > main > section > p.countdown {
+  padding: 1rem;
+}
+
 body > main > section > p > strong {
-  color: rgb(75, 5, 141);
+  color: rgb(98, 9, 182);
 }
 
 body > form {
-  padding: 0.6rem;
+  padding: 0.8rem;
   text-align: center;
   color: var(--form-color, rgb(68, 58, 153));
   background: var(--form-background, rgb(245, 245, 252));
 }
 
 body > form > p {
-  padding: 0.1rem;
-  margin: 0.1rem;
+  padding: 0.4rem;
+  margin: 0.2rem;
 }
 
 body > form > input {
-  padding: 0.4rem;
-  margin: 0.8rem;
+  padding: 0.6rem;
+  margin: 0.4rem;
 }
 
 body > form > input.submit {
   background: rgb(53, 53, 168);
-  color: rgb(191, 179, 245);
+  color: rgb(214, 210, 235);
 }
 
 body > form > input.submit:hover {
-  background: rgb(35, 35, 87);
+  background: rgb(37, 37, 80);
   color: aliceblue;
   cursor: pointer;
 }
@@ -88,39 +97,26 @@ body > form > input.submit:hover {
 body > footer {
   padding: 0.6rem;
   text-align: center;
-  color: var(--footer-color, rgb(15, 40, 155));
+  color: var(--footer-color, rgb(23, 44, 136));
   background: var(--footer-background, rgb(245, 247, 250));
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 @media screen and (min-width: 750px) {
+
   body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.4rem;
-    background: var(--body-background, rgb(244, 244, 250));
+    font-size: 1.2rem;
   }
   
   body > header {
-    padding: 1rem;
-    text-align: center;
-    background: var(--header-background, rgb(240, 241, 248));
-  }
-  
-  body > header > h1 {
-    color: var(--header-color, rgb(22, 5, 117));
+    padding: 0.9rem;
   }
   
   body > main {
-    padding: 1rem 6rem;
-    color: var(--main-color , rgb(21, 44, 109));
-    background: var(--main-background, rgb(240, 241, 250));
-    text-align: center;
+    padding: 0.8rem;
   }
   
   body > main > h2 {
-    padding: 1rem;
+    padding: 0.02rem 0.8rem;
   } 
   
   body > main > h3 {
@@ -128,24 +124,15 @@ body > footer {
   }
   
   body > main > section {
-    padding: 1rem 2rem;
-    color: var(--section-color, rgb(36, 36, 139));
-    background-color: var(--section-background , rgb(231, 231, 235));
+    padding: 0.6rem 2rem;
   }
 
   body > main > section > p {
     font-size: 1.1rem;
   }
   
-  body > main > section > p > strong {
-    color: rgb(75, 5, 141);
-  }
-  
   body > form {
     padding: 1rem;
-    text-align: center;
-    color: var(--form-color, rgb(68, 58, 153));
-    background: var(--form-background, rgb(245, 245, 252));
   }
   
   body > form > p {
@@ -160,23 +147,15 @@ body > footer {
   body > form > input.submit {
     padding: 0.6rem;
     margin: 1rem;
-    background: rgb(53, 53, 168);
-    color: rgb(191, 179, 245);
   }
   
   body > form > input.submit:hover {
     padding: 0.6rem;
     margin: 1rem;
-    background: rgb(35, 35, 87);
-    color: aliceblue;
-    cursor: pointer;
   }
   
   body > footer {
     padding: 1rem;
-    text-align: center;
-    color: var(--footer-color, rgb(15, 40, 155));
-    background: var(--footer-background, rgb(245, 247, 250));
     position: absolute;
     bottom: 0;
     width: 100%;
