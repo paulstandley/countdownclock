@@ -6,11 +6,8 @@ let newDate;
 function submitInfo() {
   const newTitle = document.getElementById("newTitle").value;
   newDate = document.getElementById("newDate").value;
-  const newTime = document.getElementById("newTime").value;
-  let newDateTime = new Date(`${newDate}, ${newTime}`).getTime();
   targetTitle.innerText = newTitle;
   submitInputValue = true;
-  console.log(newDateTime);
 }
 
 // update current time
@@ -18,8 +15,9 @@ function submitInfo() {
 runtime();
 
 function runtime() {
+
   let dateStringTarget;
-  let title = "New Year 2030 starts in ";
+  let title = "New Year 2031 starts in ";
   let clockDate = new Date();
 
   // get dom elements
